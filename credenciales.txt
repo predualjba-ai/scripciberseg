@@ -1,0 +1,14 @@
+Usuario: admin_prod
+Contraseña: P@ssw0rd2024!Secure#
+
+Usuario: db_master_user
+Contraseña: Db3$ecure_M@sterKey789
+
+Usuario: api_pagos_user
+Contraseña: XyZ!123#ApiP@yM3nt$
+
+Usuario: soporte@empresa.com
+Contraseña: C0rr30!Empres@2024#
+
+Usuario: aws_root_account
+Contraseña: AWS!R00t#P@ss987Secure$

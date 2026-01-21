@@ -1,0 +1,69 @@
+########################################################################################################################
+LOGS DEL SISTEMA - ARCHIVO DE REGISTRO
+########################################################################################################################
+
+FECHA                | TIPO     | IP             | USUARIO      | MÉTODO | ENDPOINT            | CDG | TIEMPO | TRANSACCIÓN | MENSAJE
+------------------------------------------------------------------------------------------------------------------------
+2024-01-15 14:23:45.123 | INFO     | 192.168.1.45   | admin        | GET    | /api/status         | 200 |   156ms | TXN45123   | Usuario admin accedió a /api/status
+2024-01-15 14:24:12.567 | INFO     | 10.0.0.22      | user01       | POST   | /api/login          | 200 |   234ms | TXN45124   | Usuario user01 accedió a /api/login
+2024-01-15 14:25:33.890 | WARNING  | 203.0.113.78   | guest        | GET    | /admin              | 429 |  3456ms | TXN45125   | Intento inusual desde 203.0.113.78 en /admin
+2024-01-15 14:26:01.234 | ERROR    | 192.168.1.45   | admin        | GET    | /database/query     | 500 |  4231ms | TXN45126   | Error en /database/query: Base de datos no disponible
+2024-01-15 14:27:15.678 | DENIED   | 198.51.100.33  | user02       | PUT    | /config/update      | 403 |    89ms | TXN45127   | Acceso denegado para user02 a /config/update
+2024-01-15 14:28:42.901 | INFO     | 192.168.1.100  | app_user     | GET    | /system/status      | 200 |   178ms | TXN45128   | Usuario app_user accedió a /system/status
+2024-01-15 14:29:55.123 | FAILED   | 172.16.0.55    | test_user    | POST   | /api/login          | 401 |   312ms | TXN45129   | Autenticación fallida para test_user desde 172.16.0.55
+2024-01-15 14:30:22.456 | INFO     | 10.1.1.10      | backup_usr   | GET    | /backup             | 200 |  1567ms | TXN45130   | Usuario backup_usr accedió a /backup
+2024-01-15 14:31:45.789 | ERROR    | 192.168.1.45   | admin        | DELETE | /files/cleanup      | 503 |  5123ms | TXN45131   | Error en /files/cleanup: Tiempo de espera agotado
+2024-01-15 14:32:11.012 | WARNING  | 203.0.113.99   | guest        | GET    | /api/data           | 400 |  2345ms | TXN45132   | Intento inusual desde 203.0.113.99 en /api/data
+2024-01-15 14:33:34.345 | INFO     | 192.168.1.45   | admin        | PATCH  | /user/profile       | 200 |   267ms | TXN45133   | Usuario admin accedió a /user/profile
+2024-01-15 14:34:56.678 | DENIED   | 198.51.100.77  | user01       | GET    | /logs/view          | 403 |    76ms | TXN45134   | Acceso denegado para user01 a /logs/view
+2024-01-15 14:35:23.901 | INFO     | 10.0.0.15      | service_acc  | POST   | /auth/token         | 201 |   189ms | TXN45135   | Usuario service_acc accedió a /auth/token
+2024-01-15 14:36:44.123 | FAILED   | 172.16.1.88    | john_doe     | POST   | /api/login          | 401 |   298ms | TXN45136   | Autenticación fallida para john_doe desde 172.16.1.88
+2024-01-15 14:37:12.456 | ERROR    | 192.168.1.100  | app_user     | GET    | /api/data           | 502 |  4789ms | TXN45137   | Error en /api/data: Error de validación de entrada
+2024-01-15 14:38:35.789 | INFO     | 192.168.1.45   | admin        | GET    | /config/update      | 200 |   145ms | TXN45138   | Usuario admin accedió a /config/update
+2024-01-15 14:39:01.012 | WARNING  | 203.0.113.45   | anonymous    | POST   | /upload             | 429 |  3876ms | TXN45139   | Intento inusual desde 203.0.113.45 en /upload
+2024-01-15 14:40:22.345 | DENIED   | 198.51.100.12  | guest        | PUT    | /system/status      | 403 |    92ms | TXN45140   | Acceso denegado para guest a /system/status
+2024-01-15 14:41:45.678 | INFO     | 10.0.0.22      | user01       | GET    | /user/profile       | 200 |   167ms | TXN45141   | Usuario user01 accedió a /user/profile
+2024-01-15 14:42:11.901 | ERROR    | 192.168.1.45   | admin        | POST   | /database/query     | 500 |  4987ms | TXN45142   | Error en /database/query: Memoria insuficiente
+2024-01-15 14:43:34.123 | FAILED   | 172.16.0.99    | jane_smith   | POST   | /api/login          | 401 |   345ms | TXN45143   | Autenticación fallida para jane_smith desde 172.16.0.99
+2024-01-15 14:44:56.456 | INFO     | 192.168.1.100  | app_user     | GET    | /api/status         | 200 |   134ms | TXN45144   | Usuario app_user accedió a /api/status
+2024-01-15 14:45:23.789 | WARNING  | 203.0.113.33   | test_user    | DELETE | /files/download     | 400 |  4123ms | TXN45145   | Intento inusual desde 203.0.113.33 en /files/download
+2024-01-15 14:46:44.012 | INFO     | 10.1.1.10      | backup_usr   | GET    | /backup             | 200 |  1678ms | TXN45146   | Usuario backup_usr accedió a /backup
+2024-01-15 14:47:12.345 | DENIED   | 198.51.100.55  | user02       | PATCH  | /admin              | 403 |    81ms | TXN45147   | Acceso denegado para user02 a /admin
+2024-01-15 14:48:35.678 | INFO     | 192.168.1.45   | admin        | GET    | /logs/view          | 200 |   156ms | TXN45148   | Usuario admin accedió a /logs/view
+2024-01-15 14:49:01.901 | ERROR    | 192.168.1.100  | app_user     | PUT    | /api/data           | 503 |  5342ms | TXN45149   | Error en /api/data: Formato no soportado
+2024-01-15 14:50:22.123 | FAILED   | 172.16.1.77    | root         | POST   | /api/login          | 401 |   276ms | TXN45150   | Autenticación fallida para root desde 172.16.1.77
+2024-01-15 14:51:45.456 | INFO     | 10.0.0.15      | service_acc  | GET    | /system/status      | 200 |   123ms | TXN45151   | Usuario service_acc accedió a /system/status
+2024-01-15 14:52:11.789 | WARNING  | 203.0.113.66   | anonymous    | POST   | /auth/token         | 429 |  3987ms | TXN45152   | Intento inusual desde 203.0.113.66 en /auth/token
+2024-01-15 14:53:34.012 | DENIED   | 198.51.100.88  | guest        | GET    | /config/update      | 403 |    95ms | TXN45153   | Acceso denegado para guest a /config/update
+2024-01-15 14:54:56.345 | INFO     | 192.168.1.45   | admin        | POST   | /upload             | 200 |   456ms | TXN45154   | Usuario admin accedió a /upload
+2024-01-15 14:55:23.678 | ERROR    | 192.168.1.100  | app_user     | GET    | /database/query     | 500 |  4876ms | TXN45155   | Error en /database/query: Archivo no existe
+2024-01-15 14:56:44.901 | INFO     | 10.0.0.22      | user01       | GET    | /files/download     | 200 |   178ms | TXN45156   | Usuario user01 accedió a /files/download
+2024-01-15 14:57:12.123 | FAILED   | 172.16.0.44    | test_user    | POST   | /api/login          | 401 |   312ms | TXN45157   | Autenticación fallida para test_user desde 172.16.0.44
+2024-01-15 14:58:35.456 | WARNING  | 203.0.113.12   | john_doe     | DELETE | /user/profile       | 400 |  4234ms | TXN45158   | Intento inusual desde 203.0.113.12 en /user/profile
+2024-01-15 14:59:01.789 | INFO     | 192.168.1.100  | app_user     | GET    | /api/status         | 200 |   145ms | TXN45159   | Usuario app_user accedió a /api/status
+2024-01-15 15:00:22.012 | DENIED   | 198.51.100.99  | user02       | PUT    | /logs/view          | 403 |    88ms | TXN45160   | Acceso denegado para user02 a /logs/view
+2024-01-15 15:01:45.345 | INFO     | 10.1.1.10      | backup_usr   | GET    | /backup             | 200 |  1723ms | TXN45161   | Usuario backup_usr accedió a /backup
+2024-01-15 15:02:11.678 | ERROR    | 192.168.1.45   | admin        | POST   | /config/update      | 503 |  5123ms | TXN45162   | Error en /config/update: Token expirado
+2024-01-15 15:03:34.901 | INFO     | 192.168.1.45   | admin        | GET    | /admin              | 200 |   134ms | TXN45163   | Usuario admin accedió a /admin
+2024-01-15 15:04:56.123 | FAILED   | 172.16.1.55    | jane_smith   | POST   | /api/login          | 401 |   289ms | TXN45164   | Autenticación fallida para jane_smith desde 172.16.1.55
+2024-01-15 15:05:23.456 | WARNING  | 203.0.113.88   | anonymous    | GET    | /api/data           | 429 |  3765ms | TXN45165   | Intento inusual desde 203.0.113.88 en /api/data
+2024-01-15 15:06:44.789 | INFO     | 10.0.0.15      | service_acc  | PATCH  | /auth/token         | 200 |   156ms | TXN45166   | Usuario service_acc accedió a /auth/token
+2024-01-15 15:07:12.012 | DENIED   | 198.51.100.23  | guest        | POST   | /upload             | 403 |    91ms | TXN45167   | Acceso denegado para guest a /upload
+2024-01-15 15:08:35.345 | INFO     | 192.168.1.100  | app_user     | GET    | /system/status      | 200 |   123ms | TXN45168   | Usuario app_user accedió a /system/status
+2024-01-15 15:09:01.678 | ERROR    | 192.168.1.45   | admin        | DELETE | /files/cleanup      | 500 |  4987ms | TXN45169   | Error en /files/cleanup: Recurso no encontrado
+2024-01-15 15:10:22.901 | INFO     | 10.0.0.22      | user01       | GET    | /user/profile       | 200 |   167ms | TXN45170   | Usuario user01 accedió a /user/profile
+2024-01-15 15:11:45.123 | FAILED   | 172.16.0.33    | root         | POST   | /api/login          | 401 |   301ms | TXN45171   | Autenticación fallida para root desde 172.16.0.33
+2024-01-15 15:12:11.456 | WARNING  | 203.0.113.34   | test_user    | PUT    | /config/update      | 400 |  4321ms | TXN45172   | Intento inusual desde 203.0.113.34 en /config/update
+
+========================================================================================================================
+RESUMEN ESTADÍSTICO:
+========================================================================================================================
+INFO: 20 registros (40.0%)
+WARNING: 10 registros (20.0%)
+DENIED: 8 registros (16.0%)
+FAILED: 7 registros (14.0%)
+ERROR: 5 registros (10.0%)
+
+Total registros: 50
+Período cubierto: 2024-01-22 hasta 2024-01-15
+Archivo generado: 2024-01-15 15:12:30
